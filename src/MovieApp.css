@@ -52,6 +52,30 @@
   display: flex;
   flex-direction: column;
 }
+.movie-card:hover .movie-delete-button,
+.movie-card:hover .movie-edit-button {
+  opacity: 1;
+}
+.movie-edit-button,
+.movie-delete-button
+ {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: center;
+  color: red;
+}
+.movie-edit-button {
+  width: auto;
+  left: 25px;
+  padding: 0 5px;
+  color: black;
+} 
 .movie-rating {
   position: absolute;
   top: 0;
@@ -79,3 +103,4 @@
   align-items: center;
   justify-content: center;
 }
+

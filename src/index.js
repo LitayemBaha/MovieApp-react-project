@@ -1,9 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import './MovieApp.css';
-import MovieApp from './MovieApp';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import { render } from "react-dom";
+import {Provider} from 'react-redux'
+import MovieApp from "./MovieApp";
+import movieAppStore from './store'
+import './MovieApp.css'
+const App = () => (
+  <Provider store={movieAppStore}>
+    <MovieApp />
+  </Provider>
+);
 
-ReactDOM.render(<MovieApp />, document.getElementById('root'));
-registerServiceWorker();
+render(<App />, document.getElementById("root"));
